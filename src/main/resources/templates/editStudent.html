@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<body>
+<h1>Edit student</h1>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<form th:action="@{/student/edit/{sid}(sid=${student.sid})}" th:object="${student}" method="post">
+    <div class="form-group">
+        Enter Name: <input type="text" name="name" id="name" th:field="*{name}" placeholder="Enter name"/>
+    </div>
+    <div class="form-group">
+        Enter College Name: <input type="text" name="collegename" id="collegename" th:field="*{collegename}" placeholder="Enter college name"/>
+    </div>
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</body>
+</html>
